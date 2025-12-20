@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Filehandler {
     static Scanner input= new Scanner(System.in);
-public static void addStudent(){
+    public static void addStudent(){
 
     try {
         RandomAccessFile raf = new RandomAccessFile("student.txt", "rw");
@@ -22,7 +22,7 @@ public static void addStudent(){
         }
         System.out.print("Enter name: ");
         String name = input.nextLine();
-        if (!isvalidUsername(name)) {
+        if (!isValidUsername(name)) {
             System.out.println("Invalid name!! Only letter are allowed");
             return;
         }
@@ -189,13 +189,13 @@ static void viewCourseById(){
 
     public static boolean validateOfficer(String username, String password) {
 
-        if (!isvalidUsername(username)) {
+        if (!isValidUsername(username)) {
             System.out.println("Invalid username! Only letters are allowed.");
             return false;
         }
 
 
-        if (!idVlidPassword(password)) {
+        if (!isValidPassword(password)) {
             System.out.println("Password must be at least 6 characters long.");
             return false;
         }
@@ -222,7 +222,7 @@ static void viewCourseById(){
         return false;
     }
 
-public static boolean  isvalidUsername(String name){
+public static boolean  isValidUsername(String name){
     for(int i=0;i<name.length();i++){
         char ch=name.charAt(i);
         if (!((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))){
@@ -232,7 +232,7 @@ public static boolean  isvalidUsername(String name){
     return true;
 }
 
-public static boolean idVlidPassword(String password){
+public static boolean isValidPassword(String password){
     return password.length()>=6;
 }
 

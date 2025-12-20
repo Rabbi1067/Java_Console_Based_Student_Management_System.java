@@ -38,14 +38,16 @@ public class Student {
             return null;
         }
     }
-    public void displayInfo(){
-        System.out.println("----------------------------");
-        System.out.println("ID: "+id);
-        System.out.println("Name: "+name);
-        System.out.println("Program: "+program);
-        System.out.println("batch: "+batch);
-        System.out.println("Password: "+password);
-        System.out.println("CGPA: "+cgpa);
-        System.out.println("----------------------------");
+    public void displayInfo() {
+        String line = "========================================";
+        System.out.println(line);
+        System.out.printf("%-12s : %d%n", "ID", id);
+        System.out.printf("%-12s : %s%n", "Name", name);
+        System.out.printf("%-12s : %s%n", "Program", program);
+        System.out.printf("%-12s : %s%n", "Batch", batch);
+        System.out.printf("%-12s : %s%n", "Password", password);
+        System.out.printf("%-12s : %.2f%n", "CGPA", cgpa);
+        System.out.println(line);
     }
+
 }
