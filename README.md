@@ -1,6 +1,3 @@
-Here’s a polished **README.md** you can use for your project. It explains the purpose, features, setup, and usage clearly so anyone can understand and run it:
-
----
 
 # 📚 Officer & Student Management System (Console-Based Java Project)
 
